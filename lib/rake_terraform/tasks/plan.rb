@@ -60,6 +60,7 @@ module RakeTerraform
           RubyTerraform.clean(
               directory: configuration_directory)
 
+          rmtree(configuration_directory)
           mkdir_p File.dirname(configuration_directory)
           cp_r source_directory, configuration_directory
 
